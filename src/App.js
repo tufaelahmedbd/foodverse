@@ -19,9 +19,10 @@ const App = () => {
     getData(searchQuery);
     setSearchQuery("");
     inputFieldRef.current.blur();
+    setRecipes([]);
   };
 
-  const getData = async (searchQuery) => {
+  const getData = async () => {
     try {
       setLoading(true);
       const res = await fetch(
