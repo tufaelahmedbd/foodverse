@@ -1,19 +1,17 @@
-import { useRef, useState } from "react";
 import { NavLink } from "react-router-dom";
-const Navbar = () => {
-  const [searchQuery, setSearchQuery] = useState("");
-  const inputFieldRef = useRef(null);
+
+const Navbar = ({
+  searchHandler,
+  searchQuery,
+  setSearchQuery,
+  inputFieldRef,
+}) => {
   const navActive = ({ isActive }) => {
     return {
       color: isActive ? "#f43f5e" : null,
     };
   };
-  const searchHandler = (e) => {
-    e.preventDefault();
-    console.log(searchQuery);
-    setSearchQuery("");
-    inputFieldRef.current.blur();
-  };
+
   return (
     <div className="navbar flex justify-between items-center container mx-auto  py-8 flex-col lg:flex-row gap-5 lg:gap-0">
       <h2 className="logo text-2xl font-bold lowercase italic">
