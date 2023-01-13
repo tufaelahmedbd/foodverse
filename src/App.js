@@ -1,10 +1,11 @@
+import { useRef, useState } from "react";
 import { Route, Routes } from "react-router";
 import Home from "./Components/Home";
 import Footer from "./Components/Footer";
 import Navbar from "./Components/Navbar";
 import Favourites from "./Components/Favourites";
 import NotFound from "./Components/NotFound";
-import { useRef, useState } from "react";
+import RecipeItem from "./Components/RecipeItem";
 
 const App = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -53,6 +54,7 @@ const App = () => {
             element={<Home recipes={recipes} loading={loading} error={error} />}
           />
           <Route path="/favourites" element={<Favourites />} />
+          <Route path="/recipe-item/:id" element={<RecipeItem />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </div>

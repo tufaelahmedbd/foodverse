@@ -18,7 +18,7 @@ const Recipe = ({ recipe }) => {
           {recipe.title}
         </h2>
         <Link
-          to="/"
+          to={`/recipe-item/${recipe.recipe_id}`}
           className=" bg-gradient-to-br from-rose-400 to-rose-600 text-rose-50 p-3 px-8 rounded-lg text-sm uppercase font-medium tracking-wider mt-2 inline-block shadow-md shadow-rose-200 hover:shadow-lg hover:shadow-rose-300 duration-300"
         >
           View recipe
