@@ -27,7 +27,7 @@ const App = () => {
     inputFieldRef.current.blur();
     setRecipes([]);
     setError("");
-    Navigate("/");
+    navigate("/");
   };
 
   const getData = async () => {

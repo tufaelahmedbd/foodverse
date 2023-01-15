@@ -5,7 +5,7 @@ const Home = ({ recipes, loading, error }) => {
     <div className="home container mx-auto flex flex-wrap justify-center py-10 gap-10">
       {!loading && !error && recipes.length === 0 ? (
         <div>
-          <p className="text-2xl sm:text-xl lg:text-4xl font-semibold text-rose-300">
+          <p className="text-2xl sm:text-xl lg:text-4xl font-semibold text-rose-300 text-center">
             Nothing to show, please search something!
           </p>
           <FryingPan />
